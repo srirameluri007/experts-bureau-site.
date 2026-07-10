@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experts-bureau — Recruitment Market Intelligence &amp; Lead Data</title>
+<meta name="description" content="Experts-bureau researches and delivers verified hiring contacts and recruitment market intelligence for staffing and recruitment firms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EFEAE0;
+    --paper-alt:#E6DFCF;
+    --paper-deep:#E1D9C6;
+    --ink:#2B2A25;
+    --ink-soft:#5C5A4E;
+    --ink-faint:#8B8776;
+    --forest:#445A3E;
+    --forest-deep:#33452F;
+    --forest-tint:#DDE5D6;
+    --brass:#AD7F31;
+    --brass-soft:#E7CE9C;
+    --line:#D7CEB6;
+    --white:#FBF9F4;
+    --radius:2px;
+    --maxw:1180px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    color:var(--ink);
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--forest-deep);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:16px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:18px;
+    height:1px;
+    background:var(--brass);
+    display:inline-block;
+  }
+
+  /* ---------- NAV ---------- */
+  header.site-nav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(239,234,224,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 32px;
+    max-width:var(--maxw);
+    margin:0 auto;
+  }
+  .wordmark{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:20px;
+    letter-spacing:-0.01em;
+    display:flex;
+    align-items:baseline;
+    gap:2px;
+    text-decoration:none;
+  }
+  .wordmark .dot{color:var(--brass);}
+  .nav-links{
+    display:flex;
+    align-items:center;
+    gap:36px;
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .nav-links a{
+    text-decoration:none;
+    font-size:14px;
+    color:var(--ink-soft);
+    transition:color .18s ease;
+  }
+  .nav-links a:hover{color:var(--forest-deep);}
+  .nav-cta{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--forest);
+    color:var(--white);
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    padding:10px 18px;
+    border-radius:var(--radius);
+    transition:background .18s ease;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--forest-deep);}
+  .nav-toggle{display:none;}
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:15px;
+    padding:14px 26px;
+    border-radius:var(--radius);
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:all .18s ease;
+  }
+  .btn-primary{background:var(--forest); color:var(--white);}
+  .btn-primary:hover{background:var(--forest-deep);}
+  .btn-ghost{background:transparent; color:var(--ink); border-color:var(--ink-faint);}
+  .btn-ghost:hover{border-color:var(--ink); background:var(--paper-alt);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:88px 0 96px;
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:64px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(34px,4.6vw,58px);
+    line-height:1.06;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--forest-deep);
+  }
+  .hero p.lead{
+    margin:26px 0 34px;
+    font-size:18px;
+    color:var(--ink-soft);
+    max-width:46ch;
+  }
+  .hero-ctas{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .hero-note{
+    margin-top:22px;
+    font-size:13px;
+    color:var(--ink-faint);
+    font-family:'IBM Plex Mono',monospace;
+  }
+
+  /* Signature element: live feed panel */
+  .feed-panel{
+    background:var(--ink);
+    border-radius:6px;
+    padding:22px 20px 18px;
+    box-shadow:0 22px 50px -20px rgba(43,42,37,0.45);
+    position:relative;
+  }
+  .feed-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:16px;
+    padding-bottom:14px;
+    border-bottom:1px solid rgba(251,249,244,0.14);
+  }
+  .feed-title{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--brass-soft);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .pulse-dot{
+    width:7px;height:7px;border-radius:50%;
+    background:#8FB37D;
+    box-shadow:0 0 0 rgba(143,179,125,0.6);
+    animation:pulse 2.2s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(143,179,125,0.5);}
+    70%{box-shadow:0 0 0 8px rgba(143,179,125,0);}
+    100%{box-shadow:0 0 0 0 rgba(143,179,125,0);}
+  }
+  .feed-sub{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    color:rgba(251,249,244,0.4);
+  }
+  .feed-rows{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+  }
+  .feed-row{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:4px 14px;
+    padding:13px 4px;
+    border-bottom:1px solid rgba(251,249,244,0.08);
+    opacity:0;
+    transform:translateY(6px);
+    animation:rowIn .6s ease forwards;
+  }
+  .feed-row:last-child{border-bottom:none;}
+  .feed-row:nth-child(1){animation-delay:.15s;}
+  .feed-row:nth-child(2){animation-delay:.35s;}
+  .feed-row:nth-child(3){animation-delay:.55s;}
+  .feed-row:nth-child(4){animation-delay:.75s;}
+  @keyframes rowIn{
+    to{opacity:1; transform:translateY(0);}
+  }
+  .feed-company{
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:13.5px;
+    color:var(--white);
+  }
+  .feed-meta{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    color:rgba(251,249,244,0.5);
+    margin-top:3px;
+  }
+  .feed-tag{
+    align-self:start;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10px;
+    letter-spacing:0.06em;
+    color:var(--ink);
+    background:var(--brass-soft);
+    padding:3px 7px;
+    border-radius:20px;
+    white-space:nowrap;
+    height:fit-content;
+  }
+  .feed-foot{
+    margin-top:14px;
+    padding-top:12px;
+    border-top:1px solid rgba(251,249,244,0.1);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    color:rgba(251,249,244,0.35);
+  }
+
+  /* ---------- REVEAL ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal.in-view{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  /* ---------- CAPABILITY STRIP ---------- */
+  .capstrip{
+    padding:44px 0;
+    border-bottom:1px solid var(--line);
+    background:var(--paper-alt);
+  }
+  .capstrip .wrap{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+  }
+  .cap-item{
+    border-left:1px solid var(--line);
+    padding-left:18px;
+  }
+  .cap-num{
+    font-family:'Fraunces',serif;
+    font-size:26px;
+    color:var(--forest-deep);
+    display:block;
+    margin-bottom:6px;
+  }
+  .cap-label{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    line-height:1.4;
+  }
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{padding:96px 0;}
+  .section-head{
+    max-width:640px;
+    margin-bottom:56px;
+  }
+  .section-head h2{
+    font-size:clamp(28px,3.4vw,40px);
+    line-height:1.15;
+  }
+  .section-head p{
+    margin-top:16px;
+    font-size:16.5px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:2px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .service-card{
+    background:var(--paper);
+    padding:38px 36px;
+    transition:background .2s ease;
+  }
+  .service-card:hover{background:var(--paper-alt);}
+  .service-tab{
+    display:inline-block;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--brass);
+    border:1px solid var(--brass-soft);
+    padding:4px 9px;
+    border-radius:20px;
+    margin-bottom:18px;
+  }
+  .service-card h3{
+    font-size:22px;
+    margin-bottom:12px;
+  }
+  .service-card p{
+    color:var(--ink-soft);
+    font-size:15px;
+    margin:0;
+  }
+
+  /* ---------- PROCESS ---------- */
+  .process{
+    background:var(--forest);
+    color:var(--white);
+  }
+  .process .eyebrow{color:var(--brass-soft);}
+  .process .eyebrow::before{background:var(--brass-soft);}
+  .process .section-head h2{color:var(--white);}
+  .process .section-head p{color:rgba(251,249,244,0.72);}
+  .process-list{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:32px;
+  }
+  .process-step{
+    border-top:1px solid rgba(251,249,244,0.25);
+    padding-top:20px;
+  }
+  .process-index{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--brass-soft);
+    display:block;
+    margin-bottom:14px;
+  }
+  .process-step h3{
+    color:var(--white);
+    font-size:19px;
+    margin-bottom:10px;
+  }
+  .process-step p{
+    color:rgba(251,249,244,0.68);
+    font-size:14.5px;
+    margin:0;
+  }
+
+  /* ---------- INDUSTRIES ---------- */
+  .chip-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .chip{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    padding:9px 16px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    color:var(--ink-soft);
+    background:var(--white);
+  }
+
+  /* ---------- WHY ---------- */
+  .why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+  }
+  .why-item{
+    padding-top:20px;
+    border-top:2px solid var(--brass);
+  }
+  .why-item h3{
+    font-size:19px;
+    margin-bottom:12px;
+  }
+  .why-item p{
+    color:var(--ink-soft);
+    font-size:15px;
+    margin:0;
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background:var(--paper-alt);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .contact .wrap{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:64px;
+  }
+  .contact h2{
+    font-size:clamp(28px,3.4vw,38px);
+    line-height:1.15;
+    margin-bottom:18px;
+  }
+  .contact p.lead{
+    color:var(--ink-soft);
+    font-size:16.5px;
+    max-width:42ch;
+  }
+  .contact-points{
+    margin-top:32px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .contact-point{
+    display:flex;
+    gap:12px;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+  .contact-point b{color:var(--ink);}
+
+  form.sample-form{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:36px;
+  }
+  .form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin-bottom:16px;
+  }
+  .field{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+  .field.full{grid-column:1 / -1;}
+  .field label{
+    font-size:12.5px;
+    font-family:'IBM Plex Mono',monospace;
+    color:var(--ink-soft);
+    letter-spacing:0.03em;
+  }
+  .field input, .field textarea{
+    font-family:'Inter',sans-serif;
+    font-size:14.5px;
+    padding:11px 12px;
+    border:1px solid var(--line);
+    border-radius:3px;
+    background:var(--paper);
+    color:var(--ink);
+    resize:vertical;
+  }
+  .field input:focus, .field textarea:focus{
+    outline:2px solid var(--forest);
+    outline-offset:1px;
+    background:var(--white);
+  }
+  form.sample-form .btn{width:100%; justify-content:center; margin-top:6px;}
+  .form-fine{
+    margin-top:14px;
+    font-size:12px;
+    color:var(--ink-faint);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:56px 0 40px;
+  }
+  .footer-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:32px;
+    padding-bottom:36px;
+    border-bottom:1px solid var(--line);
+  }
+  .footer-blurb{
+    max-width:38ch;
+    font-size:14px;
+    color:var(--ink-soft);
+    margin-top:12px;
+  }
+  .footer-links{
+    display:flex;
+    gap:56px;
+  }
+  .footer-col h4{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin-bottom:14px;
+  }
+  .footer-col ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .footer-col a{
+    text-decoration:none;
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+  .footer-col a:hover{color:var(--forest-deep);}
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    padding-top:24px;
+    font-size:13px;
+    color:var(--ink-faint);
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .hero .wrap{grid-template-columns:1fr; gap:48px;}
+    .capstrip .wrap{grid-template-columns:repeat(2,1fr);}
+    .services-grid{grid-template-columns:1fr;}
+    .process-list{grid-template-columns:repeat(2,1fr);}
+    .why-grid{grid-template-columns:1fr; gap:28px;}
+    .contact .wrap{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+    .footer-links{gap:36px;}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 20px;}
+    .nav-inner{padding:16px 20px;}
+    .form-row{grid-template-columns:1fr;}
+    .capstrip .wrap{grid-template-columns:1fr 1fr; gap:22px;}
+    .process-list{grid-template-columns:1fr;}
+    section{padding:72px 0;}
+    .hero{padding:56px 0 64px;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+    html{scroll-behavior:auto;}
+    .feed-row{opacity:1; transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="wordmark">Experts<span class="dot">-</span>bureau</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Approach</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#why">Why us</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="nav-cta">Request a sample list</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Know who's hiring.<br><em>Before your competitors do.</em></h1>
+        <p class="lead">Experts-bureau researches and delivers verified hiring contacts and recruitment market intelligence — so your business development team spends its time selling, not searching.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Request a sample list</a>
+          <a href="#process" class="btn btn-ghost">See how it works</a>
+        </div>
+        <div class="hero-note">Built for staffing &amp; recruitment firms — not general sales teams.</div>
+      </div>
+
+      <div class="feed-panel reveal">
+        <div class="feed-head">
+          <span class="feed-title"><span class="pulse-dot"></span>Sample intelligence feed</span>
+          <span class="feed-sub">illustrative preview</span>
+        </div>
+        <div class="feed-rows">
+          <div class="feed-row">
+            <div>
+              <div class="feed-company">SaaS Platform · Technology</div>
+              <div class="feed-meta">14 roles open · VP, Talent Acquisition · Austin, TX</div>
+            </div>
+            <span class="feed-tag">NEW</span>
+          </div>
+          <div class="feed-row">
+            <div>
+              <div class="feed-company">Regional Health Network · Healthcare</div>
+              <div class="feed-meta">7 roles open · Director of HR · Columbus, OH</div>
+            </div>
+          </div>
+          <div class="feed-row">
+            <div>
+              <div class="feed-company">Precision Manufacturer · Industrial</div>
+              <div class="feed-meta">22 roles open · Head of People · Charlotte, NC</div>
+            </div>
+            <span class="feed-tag">NEW</span>
+          </div>
+          <div class="feed-row">
+            <div>
+              <div class="feed-company">Mid-size Law Firm · Professional Services</div>
+              <div class="feed-meta">5 roles open · HR Manager · Chicago, IL</div>
+            </div>
+          </div>
+        </div>
+        <div class="feed-foot">Anonymized sample · your feed is matched to your ideal client profile</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITY STRIP -->
+  <div class="capstrip">
+    <div class="wrap">
+      <div class="cap-item">
+        <span class="cap-num">20+</span>
+        <span class="cap-label">Industries covered, from technology to industrial &amp; engineering</span>
+      </div>
+      <div class="cap-item">
+        <span class="cap-num">1&nbsp;→&nbsp;1</span>
+        <span class="cap-label">Every contact matched to a real, current decision-maker title</span>
+      </div>
+      <div class="cap-item">
+        <span class="cap-num">A–Z</span>
+        <span class="cap-label">Lists segmented by geography, headcount, and hiring activity</span>
+      </div>
+      <div class="cap-item">
+        <span class="cap-num">↻</span>
+        <span class="cap-label">Accounts you're tracking are monitored and refreshed on request</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">What we do</div>
+        <h2>Four ways we shorten your sales cycle</h2>
+        <p>Everything we build starts with the same question: who is hiring for the roles you place, and who owns that decision?</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="service-tab">Lead lists</span>
+          <h3>Lead Generation Lists</h3>
+          <p>Curated lists of companies actively hiring, matched to the roles you place, complete with the right contact to call first.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-tab">Market intel</span>
+          <h3>Recruitment Market Intelligence</h3>
+          <p>Hiring trend reports by industry and region: who's expanding, who's slowing down, and where open roles are piling up.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-tab">Research</span>
+          <h3>Prospect Research &amp; Databases</h3>
+          <p>Contact databases segmented by geography, industry, company size, and decision-maker title — built for your ideal client profile, not a generic list.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-tab">Outreach support</span>
+          <h3>Sales Prospecting Support</h3>
+          <p>Outreach-ready data packages your business development team can act on the same day they land in the inbox.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="process">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">How it works</div>
+        <h2>From brief to inbox in four steps</h2>
+        <p>A straightforward research process, run by analysts who understand staffing and recruitment.</p>
+      </div>
+      <div class="process-list">
+        <div class="process-step reveal">
+          <span class="process-index mono">01 / Define</span>
+          <h3>Define</h3>
+          <p>Tell us the roles you place, the industries you serve, and the client profile you're chasing.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-index mono">02 / Research</span>
+          <h3>Research</h3>
+          <p>Our analysts mine hiring signals and org data to find matching companies and the person who owns the decision.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-index mono">03 / Deliver</span>
+          <h3>Deliver</h3>
+          <p>You receive a clean, outreach-ready list — verified contacts, titles, and the hiring context behind each one.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-index mono">04 / Refresh</span>
+          <h3>Refresh</h3>
+          <p>We monitor the accounts you care about and flag new openings as they appear.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section id="industries">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Coverage</div>
+        <h2>Industries we research</h2>
+        <p>If your clients place into it, we're likely already researching it.</p>
+      </div>
+      <div class="chip-row reveal">
+        <span class="chip">Technology</span>
+        <span class="chip">Healthcare</span>
+        <span class="chip">Manufacturing</span>
+        <span class="chip">Financial Services</span>
+        <span class="chip">Professional Services</span>
+        <span class="chip">Life Sciences</span>
+        <span class="chip">Retail &amp; Consumer</span>
+        <span class="chip">Industrial &amp; Engineering</span>
+        <span class="chip">Logistics &amp; Supply Chain</span>
+        <span class="chip">Energy</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Why Experts-bureau</div>
+        <h2>Built for staffing and recruitment teams</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <h3>Built for recruiters, not generic marketers</h3>
+          <p>We speak the language of req counts, fill rates, and decision-maker titles, because that's the world we research.</p>
+        </div>
+        <div class="why-item reveal">
+          <h3>Verified, not scraped</h3>
+          <p>Every contact is checked by a researcher before it reaches you — not pulled from a stale database and left to rot.</p>
+        </div>
+        <div class="why-item reveal">
+          <h3>Sized to your desk</h3>
+          <p>Order a targeted list for one campaign, or a standing feed for your whole BD team. You set the scope.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Get started</div>
+        <h2>See the data before you commit</h2>
+        <p class="lead">Request a free sample list of verified contacts, matched to the roles you place.</p>
+        <div class="contact-points">
+          <div class="contact-point"><b>Email</b>&nbsp;— hello@experts-bureau.com</div>
+          <div class="contact-point"><b>Response time</b>&nbsp;— within one business day</div>
+          <div class="contact-point"><b>Sample size</b>&nbsp;— 25 verified contacts, no cost</div>
+        </div>
+      </div>
+
+      <form class="sample-form reveal" action="https://formsubmit.co/hello@experts-bureau.com" method="POST">
+        <input type="hidden" name="_subject" value="New sample list request — Experts-bureau site">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="Full name" type="text" required>
+          </div>
+          <div class="field">
+            <label for="email">Work email</label>
+            <input id="email" name="Work email" type="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field full">
+            <label for="company">Company</label>
+            <input id="company" name="Company" type="text" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field full">
+            <label for="need">What roles or industries do you place into?</label>
+            <textarea id="need" name="What roles or industries" rows="4"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Request my sample list</button>
+        <div class="form-fine">No spam. We'll only use this to prepare your sample list and follow up once.</div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="#top" class="wordmark">Experts<span class="dot">-</span>bureau</a>
+        <p class="footer-blurb">Recruitment market intelligence and verified lead data for staffing and recruitment firms.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Approach</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#why">Why us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@experts-bureau.com">hello@experts-bureau.com</a></li>
+            <li><a href="#contact">Request a sample list</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Experts-bureau. All rights reserved.</span>
+      <span>Recruitment research &amp; B2B data intelligence</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.12});
+    revealEls.forEach(el=>io.observe(el));
+  } else {
+    revealEls.forEach(el=>el.classList.add('in-view'));
+  }
+</script>
+
+</body>
+</html>
