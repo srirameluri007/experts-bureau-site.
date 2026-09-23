@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experts Bureau | Talent, Technology &amp; Business Solutions</title>
+  <meta name="description" content="Experts Bureau provides recruitment, staffing, AI automation, software development, website development and B2B consulting solutions for growing businesses.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Experts Bureau | Talent, Technology &amp; Business Solutions">
+  <meta property="og:description" content="Talent, technology and business solutions for growing companies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.experts-bureau.com/">
+  <link rel="canonical" href="https://www.experts-bureau.com/">
+
+  <!-- Favicon / Bookmark Icons -->
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --paper:#fff; --paper-alt:#f7f9fc; --paper-deep:#eef2f7;
+      --ink:#0f172a; --ink-soft:#475569; --ink-faint:#94a3b8;
+      --navy:#17365d; --navy-deep:#0d223c; --navy-tint:#e7eff8;
+      --gold:#c59b27; --gold-soft:#fcebb0;
+      --line:#dfe6ee; --white:#fff; --radius:4px; --maxw:1180px;
+      --shadow:0 18px 45px rgba(15,23,42,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+    body.menu-open{overflow:hidden}
+    h1,h2,h3{font-family:Fraunces,serif;font-weight:600;color:var(--ink);margin:0;letter-spacing:-.02em}
+    a{color:inherit} img{max-width:100%;display:block}.mono{font-family:"IBM Plex Mono",monospace}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+    .eyebrow{font:600 12px "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--navy-deep);display:flex;align-items:center;gap:10px;margin-bottom:16px}
+    .eyebrow:before{content:"";width:18px;height:1px;background:var(--gold);display:inline-block}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;padding:13px 22px;border-radius:var(--radius);border:1px solid transparent;cursor:pointer;transition:.18s ease;min-height:48px}
+    .btn-primary{background:var(--navy);color:#fff}.btn-primary:hover{background:var(--navy-deep);transform:translateY(-1px)}
+    .btn-ghost{background:#fff;color:var(--ink);border-color:#aeb9c7}.btn-ghost:hover{background:var(--paper-alt);border-color:var(--navy)}
+    .btn-light{background:#fff;color:var(--navy-deep)}.btn-light:hover{background:var(--gold-soft)}
+    section{padding:92px 0}
+    .section-head{max-width:700px;margin-bottom:48px}.section-head h2{font-size:clamp(30px,4vw,44px);line-height:1.1}.section-head p{margin:16px 0 0;color:var(--ink-soft);font-size:16.5px}
+    .site-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    .nav-inner{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .wordmark{display:inline-flex;align-items:center;gap:10px;font:600 21px Fraunces,serif;text-decoration:none;white-space:nowrap}
+    .wordmark .dot{color:var(--gold)}
+    .brand-logo{height:38px;width:auto;display:block;object-fit:contain}
+    .nav-links{display:flex;align-items:center;gap:30px;list-style:none;margin:0;padding:0}
+    .nav-links a{font-size:14px;color:var(--ink-soft);text-decoration:none}.nav-links a:hover{color:var(--navy-deep)}
+    .nav-actions{display:flex;align-items:center;gap:12px}.nav-cta{padding:10px 16px;font-size:14px}
+    .nav-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer}.nav-toggle span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0}
+    .hero{padding:100px 0 86px;background:linear-gradient(180deg,#fff 0%,#f7f9fc 100%);border-bottom:1px solid var(--line);overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+    .hero h1{font-size:clamp(42px,5.5vw,68px);line-height:1.02;max-width:760px}
+    .hero h1 em{font-style:normal;color:var(--navy)}
+    .hero-lead{margin:26px 0 32px;font-size:19px;color:var(--ink-soft);max-width:650px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}.hero-note{margin-top:18px;font:12px "IBM Plex Mono",monospace;color:var(--ink-faint)}
+    .hero-panel{background:var(--navy);color:#fff;border-radius:8px;padding:30px;box-shadow:var(--shadow);position:relative}
+    .hero-panel:after{content:"";position:absolute;width:120px;height:120px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-40px;bottom:-40px}
+    .panel-label{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft)}
+    .panel-title{font:600 30px Fraunces,serif;line-height:1.15;margin:12px 0 24px;color:#fff}
+    .solution-mini{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .mini-card{border:1px solid rgba(255,255,255,.16);padding:16px;background:rgba(255,255,255,.05);border-radius:4px}
+    .mini-card strong{display:block;color:#fff;font-size:14px;margin-bottom:4px}.mini-card span{color:rgba(255,255,255,.66);font-size:12px}
+    .intro{padding:54px 0;border-bottom:1px solid var(--line)}
+    .intro-grid{display:grid;grid-template-columns:1fr 2fr;gap:50px;align-items:start}.intro h2{font-size:30px}.intro p{margin:0;color:var(--ink-soft);font-size:17px;max-width:760px}
+    .services{background:#fff}.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .service-card{border:1px solid var(--line);padding:30px;background:#fff;display:flex;flex-direction:column;min-height:310px;transition:.2s ease}
+    .service-card:hover{border-color:#b6c4d4;box-shadow:var(--shadow);transform:translateY(-2px)}
+    .service-card.featured{background:var(--navy);border-color:var(--navy);color:#fff}.service-card.featured h3,.service-card.featured p{color:#fff}.service-card.featured .service-list li{color:rgba(255,255,255,.78)}.service-card.featured .service-tab{color:var(--gold-soft);border-color:rgba(252,235,176,.4)}
+    .service-tab{display:inline-block;width:max-content;font:600 10px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-soft);padding:5px 9px;border-radius:20px;margin-bottom:18px}
+    .service-card h3{font-size:26px;margin-bottom:10px}.service-card p{color:var(--ink-soft);font-size:14.5px;margin:0 0 18px}
+    .service-list{list-style:none;padding:0;margin:0 0 22px;display:grid;grid-template-columns:1fr 1fr;gap:7px 18px}.service-list li{font-size:13px;color:var(--ink-soft);position:relative;padding-left:14px}.service-list li:before{content:"";position:absolute;left:0;top:.65em;width:5px;height:1px;background:var(--gold)}
+    .service-link{margin-top:auto;display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:14px;font-weight:700;color:var(--navy)}.featured .service-link{color:var(--gold-soft)}
+    .industries{background:var(--paper-alt)}.chip-row{display:flex;flex-wrap:wrap;gap:10px}.chip{font:13px "IBM Plex Mono",monospace;padding:10px 15px;border:1px solid var(--line);border-radius:24px;background:#fff;color:var(--ink-soft)}
+    .why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}.why-item{padding-top:20px;border-top:2px solid var(--gold)}.why-item h3{font-size:19px;margin-bottom:10px}.why-item p{color:var(--ink-soft);font-size:14px;margin:0}
+    .about{background:var(--navy);color:#fff}.about .eyebrow{color:var(--gold-soft)}.about .eyebrow:before{background:var(--gold-soft)}.about h2{color:#fff;font-size:clamp(30px,4vw,44px)}.about p{color:rgba(255,255,255,.75);font-size:17px;max-width:760px}.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}.about-side{border-left:1px solid rgba(255,255,255,.2);padding-left:28px}.about-side strong{display:block;font:600 25px Fraunces,serif;color:#fff;margin-bottom:8px}.about-side span{font-size:14px;color:rgba(255,255,255,.65)}
+    .process{background:#fff}.process-list{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}.process-step{border-top:1px solid var(--line);padding-top:18px}.process-index{display:block;font:600 11px "IBM Plex Mono",monospace;color:var(--gold);margin-bottom:12px}.process-step h3{font-size:20px;margin-bottom:9px}.process-step p{margin:0;color:var(--ink-soft);font-size:14px}
+    .contact{background:var(--paper-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start}.contact h2{font-size:clamp(32px,4vw,46px);line-height:1.08}.contact-lead{color:var(--ink-soft);font-size:16.5px;max-width:520px}.contact-points{margin-top:26px;display:grid;gap:12px}.contact-point{font-size:14px;color:var(--ink-soft)}.contact-point b{color:var(--ink)}
+    .form{background:#fff;border:1px solid var(--line);border-radius:7px;padding:30px;box-shadow:0 10px 30px rgba(15,23,42,.04)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font:600 11px "IBM Plex Mono",monospace;color:var(--ink-soft);letter-spacing:.03em}.field input,.field select,.field textarea{font:14px Inter,sans-serif;padding:11px 12px;border:1px solid var(--line);border-radius:3px;background:#fff;color:var(--ink);width:100%}.field textarea{resize:vertical;min-height:110px}.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--navy);outline-offset:1px}.form .btn{width:100%;margin-top:4px}.form-fine{font-size:11px;color:var(--ink-faint);margin-top:12px}
+    footer{padding:50px 0 30px}.footer-top{display:flex;justify-content:space-between;gap:40px;padding-bottom:32px;border-bottom:1px solid var(--line)}.footer-blurb{max-width:400px;color:var(--ink-soft);font-size:14px}.footer-links{display:flex;gap:55px}.footer-col h4{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 13px}.footer-col ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}.footer-col a{font-size:13px;color:var(--ink-soft);text-decoration:none}.footer-col a:hover{color:var(--navy)}.footer-bottom{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;padding-top:20px;font-size:12px;color:var(--ink-faint)}.footer-tagline{font-weight:600;color:var(--navy)}
+    .legal{padding:16px 0;border-top:1px solid var(--line);font-size:11px;color:var(--ink-faint)}.legal a{margin-right:18px}
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}.reveal.in-view{opacity:1;transform:none}
+    @media(max-width:1000px){.nav-links{gap:18px}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-panel{max-width:680px}.why-grid{grid-template-columns:repeat(2,1fr)}.process-list{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){
+      .wrap{padding:0 20px}.nav-inner{min-height:66px}.nav-toggle{display:block}.nav-actions .nav-cta{display:none}.nav-links{display:none;position:absolute;left:0;right:0;top:66px;background:#fff;border-bottom:1px solid var(--line);padding:18px 20px;flex-direction:column;align-items:flex-start;gap:0;box-shadow:0 12px 25px rgba(15,23,42,.08)}.nav-links.open{display:flex}.nav-links li{width:100%}.nav-links a{display:block;padding:12px 0}
+      section{padding:70px 0}.hero{padding:68px 0 64px}.hero h1{font-size:clamp(40px,12vw,58px)}.hero-lead{font-size:17px}.solution-mini{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr}.service-card{min-height:auto}.service-list{grid-template-columns:1fr}.intro-grid{grid-template-columns:1fr;gap:15px}.why-grid{grid-template-columns:1fr}.process-list{grid-template-columns:1fr}.footer-top{flex-direction:column}.footer-links{gap:35px;flex-wrap:wrap}.form-row{grid-template-columns:1fr}.contact-grid{gap:35px}
+    }
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+
+<body>
+<header class="site-nav">
+  <div class="wrap nav-inner">
+    <a href="#home" class="wordmark">
+      <img src="logo.png" alt="Experts Bureau Logo" class="brand-logo">
+      <span>Experts<span class="dot">-</span>bureau</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="#contact" class="btn btn-primary nav-cta">Talk to Our Team</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <div class="eyebrow">Talent • Technology • Business Solutions</div>
+        <h1>Talent, Technology &amp; Business Solutions for <em>Growing Companies.</em></h1>
+        <p class="hero-lead">Experts Bureau helps businesses find the right talent, automate operations, build digital solutions and accelerate growth through practical technology and business services.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Talk to Our Team</a>
+          <a href="#services" class="btn btn-ghost">Explore Our Services</a>
+        </div>
+        <div class="hero-note">For businesses, startups, SMEs and organizations.</div>
+      </div>
+      <div class="hero-panel reveal">
+        <div class="panel-label">One partner. Multiple business needs.</div>
+        <div class="panel-title">Build your team. Improve your operations. Move your business forward.</div>
+        <div class="solution-mini">
+          <div class="mini-card"><strong>Recruitment &amp; Staffing</strong><span>Talent for technology and business roles</span></div>
+          <div class="mini-card"><strong>AI &amp; Automation</strong><span>Practical workflows and intelligent solutions</span></div>
+          <div class="mini-card"><strong>Web &amp; Software</strong><span>Digital products and business applications</span></div>
+          <div class="mini-card"><strong>B2B Consulting</strong><span>Technology, process and growth support</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="wrap intro-grid">
+      <h2>Solutions built around the business requirement.</h2>
+      <p>Experts Bureau is a business solutions company combining talent, technology and consulting to help organizations build teams, improve processes and adopt practical digital solutions. Engagements can be project-based, ongoing or structured around long-term business requirements.</p>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Our Services</div>
+        <h2>From talent to technology, one connected service offering.</h2>
+        <p>Choose the support you need today, or combine services as your business requirements evolve.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <span class="service-tab">Talent</span>
+          <h3>Recruitment &amp; Staffing</h3>
+          <p>Recruitment and staffing support for organizations building technology, business and operational teams.</p>
+          <ul class="service-list">
+            <li>Permanent Recruitment</li><li>Contract Staffing</li><li>IT Staffing</li><li>Non-IT Staffing</li>
+            <li>Executive Search</li><li>Talent Sourcing</li><li>Recruitment Process Support</li>
+          </ul>
+          <a href="#contact" class="service-link">Hire Talent →</a>
+        </article>
+
+        <article class="service-card featured reveal">
+          <span class="service-tab">Technology</span>
+          <h3>AI &amp; Automation</h3>
+          <p>Practical AI and automation solutions designed around customer service, sales, operations and internal workflows.</p>
+          <ul class="service-list">
+            <li>AI Chatbot Development</li><li>Customer Support Automation</li><li>Business Process Automation</li><li>AI-Powered Workflows</li>
+            <li>Lead Qualification Automation</li><li>CRM / SaaS Automation</li><li>Custom AI Solutions</li>
+          </ul>
+          <a href="#contact" class="service-link">Automate Your Business →</a>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-tab">Digital</span>
+          <h3>Website &amp; Software Development</h3>
+          <p>Business websites, applications and custom software built around the organization's digital requirements.</p>
+          <ul class="service-list">
+            <li>Business Websites</li><li>Corporate Websites</li><li>E-commerce Websites</li><li>Web Applications</li>
+            <li>Custom Software</li><li>Website Maintenance &amp; Support</li>
+          </ul>
+          <a href="#contact" class="service-link">Build Your Solution →</a>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-tab">Advisory</span>
+          <h3>B2B Consulting</h3>
+          <p>Business and technology consulting focused on practical improvements, transformation and growth support.</p>
+          <ul class="service-list">
+            <li>Business Process Consulting</li><li>Digital Transformation</li><li>Technology Consulting</li><li>Recruitment Consulting</li>
+            <li>Automation Consulting</li><li>Business Growth Support</li>
+          </ul>
+          <a href="#contact" class="service-link">Talk to a Consultant →</a>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-tab">Specialized Research</span>
+          <h3>Recruitment Market Intelligence</h3>
+          <p>A specialized offering for staffing and recruitment firms that need hiring intelligence and prospect research.</p>
+          <ul class="service-list">
+            <li>Hiring Intelligence</li><li>Recruitment Lead Generation</li><li>Decision-Maker Research</li><li>Market Research</li>
+            <li>Prospect Databases</li><li>Hiring Activity Monitoring</li>
+          </ul>
+          <a href="#contact" class="service-link">Request a Sample →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="industries" class="industries">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Industries We Serve</div>
+        <h2>Business solutions across growing industries.</h2>
+        <p>Our services can be structured around the requirements, operating model and growth stage of the organization.</p>
+      </div>
+      <div class="chip-row reveal">
+        <span class="chip">Information Technology</span><span class="chip">SaaS &amp; Software</span><span class="chip">Financial Services</span>
+        <span class="chip">Healthcare</span><span class="chip">Manufacturing</span><span class="chip">E-commerce</span>
+        <span class="chip">Professional Services</span><span class="chip">Logistics &amp; Supply Chain</span><span class="chip">Education</span><span class="chip">Startups &amp; SMEs</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <div class="eyebrow">About Experts Bureau</div>
+        <h2>Talent, technology and consulting working together.</h2>
+        <p>Experts Bureau is a business solutions company combining talent, technology and consulting to help organizations build teams, improve processes and adopt practical digital solutions.</p>
+        <p>We support businesses with recruitment and staffing, AI and automation, website and software development, B2B consulting, and specialized recruitment market intelligence.</p>
+      </div>
+      <div class="about-side reveal">
+        <strong>Practical support for real business requirements.</strong>
+        <span>Project-based engagements, ongoing support and long-term partnerships can be structured according to the client's needs.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Why Experts Bureau</div>
+        <h2>A practical partner across talent and technology.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item reveal"><h3>One Partner for Talent &amp; Technology</h3><p>Recruitment and technology services under one business relationship.</p></div>
+        <div class="why-item reveal"><h3>Practical Solutions</h3><p>Solutions designed around the client's actual business requirements.</p></div>
+        <div class="why-item reveal"><h3>Flexible Engagement</h3><p>Support for individual projects, ongoing requirements and long-term partnerships.</p></div>
+        <div class="why-item reveal"><h3>Business-Focused Technology</h3><p>AI, automation and software designed to solve real operational problems.</p></div>
+        <div class="why-item reveal"><h3>Talent Expertise</h3><p>Recruitment and staffing support across relevant technology and business roles.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">How We Work</div>
+        <h2>Understand the requirement. Build the right solution.</h2>
+        <p>A straightforward engagement model that can adapt to recruitment, consulting and technology projects.</p>
+      </div>
+      <div class="process-list">
+        <div class="process-step reveal"><span class="process-index">01 / DISCOVER</span><h3>Understand</h3><p>We discuss your business requirement, goals, constraints and desired outcome.</p></div>
+        <div class="process-step reveal"><span class="process-index">02 / PLAN</span><h3>Define</h3><p>We identify the appropriate service, scope, approach and engagement model.</p></div>
+        <div class="process-step reveal"><span class="process-index">03 / DELIVER</span><h3>Execute</h3><p>Our team works on the agreed recruitment, technology or consulting deliverables.</p></div>
+        <div class="process-step reveal"><span class="process-index">04 / SUPPORT</span><h3>Continue</h3><p>Where needed, we provide ongoing support, improvements and additional services.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <div class="eyebrow">Let's Talk</div>
+        <h2>Have a business requirement? Let's talk.</h2>
+        <p class="contact-lead">Tell us what you are trying to build, improve or hire for. We will review the requirement and connect you with the relevant team.</p>
+        <div class="contact-points">
+          <div class="contact-point"><b>General enquiries</b> — <a href="mailto:hello@experts-bureau.com">hello@experts-bureau.com</a></div>
+          <div class="contact-point"><b>Recruitment / Talent</b> — <a href="mailto:talent@experts-bureau.com">talent@experts-bureau.com</a></div>
+          <div class="contact-point"><b>Website</b> — <a href="https://www.experts-bureau.com/">www.experts-bureau.com</a></div>
+        </div>
+      </div>
+
+      <form class="form reveal" action="https://formsubmit.co/hello@experts-bureau.com" method="POST">
+        <input type="hidden" name="_subject" value="New business enquiry — Experts Bureau">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.experts-bureau.com/">
+        <div class="form-row">
+          <div class="field"><label for="name">NAME</label><input id="name" name="Name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="email">BUSINESS EMAIL</label><input id="email" name="Business Email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="company">COMPANY</label><input id="company" name="Company" type="text" autocomplete="organization" required></div>
+          <div class="field"><label for="phone">PHONE / WHATSAPP</label><input id="phone" name="Phone / WhatsApp" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="form-row">
+          <div class="field full">
+            <label for="service">SERVICE REQUIRED</label>
+            <select id="service" name="Service Required" required>
+              <option value="">Select a service</option>
+              <option>Recruitment &amp; Staffing</option>
+              <option>AI &amp; Chatbot Development</option>
+              <option>SaaS / Automation</option>
+              <option>Website Development</option>
+              <option>Software Development</option>
+              <option>B2B Consulting</option>
+              <option>Recruitment Market Intelligence</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field full"><label for="message">MESSAGE</label><textarea id="message" name="Message" placeholder="Tell us briefly about your requirement."></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Talk to Our Team</button>
+        <div class="form-fine">Your enquiry will be used to understand and respond to your business requirement.</div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="#home" class="wordmark">
+          <img src="logo.png" alt="Experts Bureau Logo" class="brand-logo">
+          <span>Experts<span class="dot">-</span>bureau</span>
+        </a>
+        <p class="footer-blurb">Talent • Technology • Business Solutions<br>Recruitment &amp; Staffing | AI &amp; Automation | Software Development | B2B Consulting</p>
+        <p class="footer-blurb"><a href="mailto:hello@experts-bureau.com">hello@experts-bureau.com</a><br><a href="https://www.experts-bureau.com/">www.experts-bureau.com</a></p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#industries">Industries</a></li><li><a href="#why">Why Us</a></li><li><a href="#contact">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="#services">Recruitment &amp; Staffing</a></li><li><a href="#services">AI &amp; Automation</a></li><li><a href="#services">Web &amp; Software</a></li><li><a href="#services">B2B Consulting</a></li><li><a href="#services">Market Intelligence</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Experts Bureau. All rights reserved.</span>
+      <span class="footer-tagline">Talent • Technology • Business Solutions</span>
+    </div>
+    <div class="legal">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('menu-open', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }));
+
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12});
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in-view'));
+  }
+</script>
+</body>
+</html>
